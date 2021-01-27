@@ -6,6 +6,9 @@ module.exports = {
     client: 'mysql',
     connection: {
       filename: './src/database/db.mysql'
+    },
+    migrations: {
+      directory: './src/database/migrations'
     }
   },
 
