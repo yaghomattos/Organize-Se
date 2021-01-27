@@ -8,3 +8,5 @@ routes.get('/', (request, response) => {
     modelo: 'JSON'
   });
 });
+
+module.exports = routes;
