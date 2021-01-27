@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      filename: './dev.mysql'
+      filename: './src/database/db.mysql'
     }
   },
 
