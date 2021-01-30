@@ -3,9 +3,9 @@
 module.exports = {
 
   development: {
-    client: 'mysql',
+    client: 'sqlite',
     connection: {
-      filename: './src/database/db.mysql'
+      filename: './src/database/db.sqlite'
     },
     migrations: {
       directory: './src/database/migrations'
