@@ -1,15 +1,34 @@
 //importe express
 const express = require('express');
+//importe crypto para gerar id's
+const crypto = require('crypto');
+
+const connection = require('./database/connection');
+
 //instância router do express para controle de rotas
 const routes = express.Router();
 
-//rota get
-routes.get('/', (request, response) => {
-  const data = request.body;
+//rota get para ver users
+routes.get('/user', async(request, response) => {
+  const users = await connection('users').select('*');
 
-  console.log(data);
+  return response.json(users);
+})
 
-  return response.json();
+//rota post para user
+routes.post('/user', async (request, response) => {
+  const { name, email, password } = request.body;
+
+  const id = crypto.randomBytes(4).toString('HEX');
+
+  await connection('users').insert({
+    id,
+    name,
+    email,
+    password,
+  })
+
+  return response.json({ id });
 });
 
 //exporta o routes para uso externo
