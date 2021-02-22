@@ -5,10 +5,11 @@ const routes = express.Router();
 
 //rota get
 routes.get('/', (request, response) => {
-  return response.json({
-    teste: 'Hello World',
-    modelo: 'JSON'
-  });
+  const data = request.body;
+
+  console.log(data);
+
+  return response.json();
 });
 
 //exporta o routes para uso externo
