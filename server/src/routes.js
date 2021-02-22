@@ -3,9 +3,13 @@ const express = require('express');
 
 const UserController = require('./controllers/UserController');
 const OutlaysController = require('./controllers/OutlaysController');
+const SessionController = require('./controllers/SessionController');
 
 //instância router do express para controle de rotas
 const routes = express.Router();
+
+//rota de login
+routes.post('/sessions', SessionController.create);
 
 //rota get para ver todos users -> desenvolvimento apenas
 routes.get('/user', UserController.index);
