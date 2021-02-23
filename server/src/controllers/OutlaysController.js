@@ -3,7 +3,16 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    const outlays = await connection('outlays').select('*');
+    const { page = 1} = request.query;
+    //total de outlays
+    const [count] = await connection('outlays').count();
+
+    const outlays = await connection('outlays')
+      .limit(5) //limita a exibição até 5 outlays por página
+      .offset((page - 1) * 5)
+      .select('*');
+
+    response.header('X-Total-Count', count['count(*)']);
   
     return response.json(outlays);
   },  
