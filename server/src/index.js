@@ -1,10 +1,15 @@
-//importe o express 
-const express = require ('express');
+//importe do express 
+const express = require('express');
+//importe do cors
+const cors = require('cors');
 //importe do arquivo routes.js
 const routes = require('./routes');
-//instãncia do express
+
+//instância do express
 const app = express();
 
+//comunicação com o frontend
+app.use(cors());
 //utiliza JSON como troca de informação
 app.use(express.json());
 //direciona o aplicativo para o arquivo rotas
