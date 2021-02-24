@@ -5,12 +5,6 @@ exports.up = function(knex) {
     table.string('email').notNullable();
     table.string('login').notNullable();
     table.string('password').notNullable();
-    /*table.decimal('salario').notNullable();
-    table.decimal('gastoA').notNullable();
-    table.decimal('gastoB').notNullable();
-    table.decimal('gastoC').notNullable();
-    table.decimal('gastoD').notNullable();
-    table.decimal('gastoE').notNullable();*/
   });
 };
 

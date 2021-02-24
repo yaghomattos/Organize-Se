@@ -5,6 +5,7 @@ exports.up = function(knex) {
     table.float('value').notNullable();
     table.string('name').notNullable();
     table.string('type').notNullable();
+    
     table.string('user_id').notNullable();
     table.foreign('user_id').references('id').inTable('users');
   });

@@ -1,3 +1,4 @@
+//importe da conexão com o banco de dados
 const connection = require('../database/connection');
 
 module.exports = {
