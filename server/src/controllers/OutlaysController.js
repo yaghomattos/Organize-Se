@@ -3,11 +3,12 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    const { page = 1} = request.query;
+    const user_id = request.headers.authorization;
+    const { page = 1 } = request.query;
     //total de outlays
     const [count] = await connection('outlays').count();
-
     const outlays = await connection('outlays')
+      .where('user_id', user_id)
       .limit(5) //limita a exibição até 5 outlays por página
       .offset((page - 1) * 5)
       .select('*');
