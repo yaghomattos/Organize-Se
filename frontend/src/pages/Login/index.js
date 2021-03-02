@@ -5,17 +5,17 @@ import '../Register/index';
 
 function Login() {
   return(
-    <div className="login-container">
+    <div className="container">
       <section className="form">
         <img src="" alt="logo"/>
         <form>
-          <h1>Fazer login</h1>
+          <h1>Faça login</h1>
 
           <input placeholder="login"/>
           <input placeholder="senha"/>
-          <a className="button singing" href="/singin">Entrar</a>
+          <button  type="submit">Entrar</button>
 
-          <a className="button register" href="/register">Cadastrar</a>
+          <a className="register" href="/register">Cadastrar</a>
         </form>
       </section>
     </div>
