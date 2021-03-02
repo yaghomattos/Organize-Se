@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './styles.css';
-import '../Register/index';
 
 function Login() {
   return(

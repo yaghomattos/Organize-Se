@@ -1,0 +1,35 @@
+.calc-container {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-calc {
+  flex-direction: row;
+}
+
+.data-calc form {
+  margin-top: 40px;
+}
+
+.data-calc form input {
+  width: 180px;
+  height: 45px; 
+}
+
+.data-calc form button {
+  display: block;
+  width: 120px;
+  height: 30px;
+  margin: 15px auto;
+}
+
