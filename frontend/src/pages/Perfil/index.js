@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -12,7 +13,12 @@ function Perfil() {
           <p>Email: </p>
           <p>Senha: </p>
         </section>
-        <button className="back">voltar</button>
+        <Link to="/prompt altera email">Alterar email</Link>
+        <Link to="/prompt altera senha">Alterar senha</Link>
+
+        <Link to="/minors">
+          <button className="back">voltar</button>
+        </Link>
       </section>
     </div>
   );
