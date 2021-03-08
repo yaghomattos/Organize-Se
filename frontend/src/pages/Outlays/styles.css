@@ -1,0 +1,19 @@
+.outlays-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outlays-list {
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.teste {
+  display: flex;
+  justify-content: space-evenly;
+  width: 600px;
+  margin-top: 20px;
+}
