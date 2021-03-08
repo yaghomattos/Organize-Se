@@ -3,3 +3,11 @@
   text-decoration: none;
   color: #fff;
 }
+
+input{
+  border-radius: 10px;
+}
+
+button{
+  border-radius: 8px;
+}

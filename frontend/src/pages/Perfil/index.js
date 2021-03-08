@@ -7,14 +7,14 @@ function Perfil() {
   return(
     <div className="container">
       <section className="form">
-        <img src="" alt="foto perfil"/>
-        <section>
-          <p>Nome: </p>
-          <p>Email: </p>
-          <p>Senha: </p>
+        <img src="./perfil.jpg" alt="foto perfil"/>
+        <section className = 'dadosPerfil'>
+          <p>Nome: Fulano</p>
+          <p>Email: fulano@gmail.com</p>
+          <p>Senha: 1234</p>
         </section>
-        <Link to="/prompt altera email">Alterar email</Link>
-        <Link to="/prompt altera senha">Alterar senha</Link>
+        <Link className = 'linksAltera' to="/prompt altera email">Alterar email</Link>
+        <Link className = 'linksAltera' to="/prompt altera senha">Alterar senha</Link>
 
         <Link to="/minors">
           <button className="back">voltar</button>

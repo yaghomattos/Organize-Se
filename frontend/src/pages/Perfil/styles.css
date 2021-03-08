@@ -6,3 +6,15 @@
   position: relative;
   top: 250px;
 }
+
+.dadosPerfil{
+  font-size: 26px;
+  line-height: 60px;
+  position: relative;
+  top: 80px;
+}
+
+.linksAltera{
+  position: relative;
+  top: 80px;
+}

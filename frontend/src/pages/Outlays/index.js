@@ -7,7 +7,7 @@ function Outlays() {
   return(
     <div className="outlays-container">
       <div className="outlays-list">
-        <ul>
+        <ul className = "listaGastos">
           <li>
             <strong>Custo:</strong>
             <p>R$20,00</p>
@@ -18,7 +18,7 @@ function Outlays() {
             <strong>Categoria:</strong>
             <p>fixo</p>
 
-            <button>Excluir</button>
+            <button className = "buttonExcluir">Excluir</button>
           </li>
 
           <li>
@@ -31,7 +31,7 @@ function Outlays() {
             <strong>Categoria:</strong>
             <p>fixo</p>
 
-            <button>Excluir</button>
+            <button className = "buttonExcluir">Excluir</button>
           </li>
 
           <li>
@@ -44,7 +44,7 @@ function Outlays() {
             <strong>Categoria:</strong>
             <p>fixo</p>
 
-            <button>Excluir</button>
+            <button className = "buttonExcluir">Excluir</button>
           </li>
 
           <li>
@@ -57,7 +57,7 @@ function Outlays() {
             <strong>Categoria:</strong>
             <p>fixo</p>
 
-            <button>Excluir</button>
+            <button className = "buttonExcluir">Excluir</button>
           </li>
         </ul>
       </div>
