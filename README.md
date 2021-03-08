@@ -12,4 +12,4 @@ $ npm start
 - [ ] Criar os prompts
 - [ ] Criar o cálculo dos gastos, tanto outlay quanto minors
 - [ ] Estruturar em MVC
-- [ ] Criar a autenticação de login
+- [ ] Criar a autenticação de login no frontend
