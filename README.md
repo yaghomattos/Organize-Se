@@ -6,10 +6,10 @@ $ npm start
 
 ## Features 
 
-- [ ] Intalar o axios
+- [x] Intalar o axios
 - [ ] Comunicação do frontend com o backend pelo axios
 - [ ] Editar as páginas
 - [ ] Criar os prompts
 - [ ] Criar o cálculo dos gastos, tanto outlay quanto minors
 - [ ] Estruturar em MVC
-- [ ] Criar a autenticação de login no frontend
+- [x] Criar a autenticação de login no frontend
