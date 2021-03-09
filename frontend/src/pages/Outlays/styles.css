@@ -13,7 +13,7 @@
   border-radius: 15px;
 }
 
-.teste {
+.links {
   display: flex;
   justify-content: space-evenly;
   width: 600px;
@@ -21,10 +21,30 @@
 }
 
 .listaGastos{
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0 20px;
+}
+
+.listaGastos li {
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+}
+
+.listaGastos strong, 
+.listaGastos p {
+  margin-left: 10px;
 }
 
 .buttonExcluir{
+  display: flex;
+  position: relative;
+  bottom: 190px;
+  left: 210px;
+  padding: 2px;
   height: 18px;
   font-size: 13px;
+  align-items: center;
 }

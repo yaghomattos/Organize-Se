@@ -55,7 +55,7 @@ function Outlays() {
         </ul>
       </div>
 
-      <div className="teste">
+      <div className="links">
         <Link to="/prompt editar salario">
           <button>Alterar salário</button>
         </Link>
