@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import './styles.css';
@@ -33,6 +32,14 @@ function Outlays() {
     }
   }
 
+  async function promptSalario() {
+    await prompt('Digite seu salário: ');
+  }
+
+  async function promptGastos() {
+    await prompt('Gastos: ');
+  }
+
   return(
     <div className="outlays-container">
       <div className="outlays-list">
@@ -56,12 +63,8 @@ function Outlays() {
       </div>
 
       <div className="links">
-        <Link to="/prompt editar salario">
-          <button>Alterar salário</button>
-        </Link>
-        <Link to="/prompt editar gastos">
-          <button>Editar gastos fixos</button>
-        </Link>
+          <button onClick={ promptSalario }>Alterar salário</button>
+          <button onClick={ promptGastos }>Editar gastos fixos</button>
       </div>
     </div>
   );

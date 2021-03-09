@@ -18,6 +18,14 @@ function Perfil() {
     history.push('/');
   }
 
+  async function promptEmail() {
+    await prompt('Digite o novo email:');
+  }
+
+  async function promptSenha() {
+    await prompt('Digite a nova senha:');
+  }
+
   return(
     <div className="container">
       <section className="form">
@@ -27,8 +35,8 @@ function Perfil() {
           <p>Email: { email } </p>
           <p>Senha: { password } </p>
         </section>
-        <Link className = 'linksAltera' to="/prompt altera email">Alterar email</Link>
-        <Link className = 'linksAltera' to="/prompt altera senha">Alterar senha</Link>
+        <Link className = 'linksAltera' onClick={ promptEmail }>Alterar email</Link>
+        <Link className = 'linksAltera' onClick={ promptSenha }>Alterar senha</Link>
 
         <Link to="/minors">
           <button className="back">voltar</button>
