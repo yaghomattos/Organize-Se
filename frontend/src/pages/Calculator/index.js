@@ -1,20 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './styles.css';
 
-function Calculator() {
+function Calculator(e) {
+  const [tempo, setTempo] = useState('');
+  const [inicial, setInicial] = useState('');
+  const [mensal, setMensal] = useState('');
+  const [percentual, setPercentual] = useState('');
+
+  async function CalculaInvestimento(e) {
+    e.preventDefault();
+    document.getElementById('resultado').innerHTML = ''
+    var result = Number(inicial) + (Number(mensal) + Number((percentual/100))*Number(mensal) )*Number(tempo);
+
+    if(tempo > 1)
+      var stringResult = "Ao final do seu investimento você terá R$ " + result + " em: " + tempo + " meses"
+    else {
+      var stringResult = "Ao final do seu investimento você terá R$ " + result + " em: " + tempo + " mês"
+    }      
+
+    document.getElementById('resultado').append(stringResult)
+  }
+
   return(
     <div className="calc-container">
       <div className="review">
         <h1>Especificação do investimento</h1>
-        <img src="" alt="grafico"/>
+        <div id="resultado"></div>
       </div>
       
       <section className="data-calc">
-        <form>
-          <input placeholder="Tempo de investimento"/>
-          <input placeholder="Ivestimento inicial"/>
-          <input placeholder="Investimento mensal"/>
+        <form onSubmit={ CalculaInvestimento }>
+          <input type="number" placeholder="Tempo de investimento" onChange={ e => setTempo(e.target.value)}/>
+          <input type="number" placeholder="Investimento inicial" onChange={ e => setInicial(e.target.value)}/>
+          <input type="number" placeholder="Investimento mensal" onChange={ e => setMensal(e.target.value)}/>
+          <input type="number" placeholder="Percentual" onChange={ e => setPercentual(e.target.value)}/>
           <button type="submit">Calcular</button>
         </form>
       </section>

@@ -7,6 +7,11 @@
   justify-content: center;
 }
 
+#resultado {
+  padding-top: 20px;
+  font-weight: bold;
+}
+
 .review {
   display: flex;
   flex-direction: column;
