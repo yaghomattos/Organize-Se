@@ -8,7 +8,7 @@ function Login() {
       <section className="form">
         <img src="" alt="logo"/>
         <form>
-          <h1>Faça Login</h1>
+          <h1>Faça login</h1>
 
           <input placeholder="login"/>
           <input placeholder="senha"/>
