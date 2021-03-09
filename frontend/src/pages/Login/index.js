@@ -19,6 +19,8 @@ function Login() {
       localStorage.setItem('login', login);
       localStorage.setItem('password', password);
       localStorage.setItem('id', response.data.id);
+      localStorage.setItem('name', response.data.name);
+      localStorage.setItem('email', response.data.email);
 
       history.push('/minors');
 

@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import api from '../../services/api';
+//import api from '../../services/api';
 
 
 import './styles.css';
 
 function Perfil() {
-  const [name]= useState('');
-  const [email] = useState('');
-  const user_id = localStorage.getItem('id');
+  const name = localStorage.getItem('name');
+  const email = localStorage.getItem('email');
   const password = localStorage.getItem('password');
 
   const history = useHistory();
@@ -18,24 +17,12 @@ function Perfil() {
     
     history.push('/');
   }
-  
-  async function info() {
-    try {
-      const response = await api.post('sessions', { user_id });
-
-      localStorage.setItem('name', response.data.name);
-      localStorage.setItem('email', response.data.email);
-
-    } catch(err) {
-      alert('Erro na recuperação da data');
-    }
-  }
 
   return(
     <div className="container">
       <section className="form">
         <img src="./perfil.jpg" alt="foto perfil"/>
-        <section onLoad={ info } className = 'dadosPerfil'>
+        <section className = 'dadosPerfil'>
           <p>Nome: { name } </p>
           <p>Email: { email } </p>
           <p>Senha: { password } </p>
