@@ -29,7 +29,7 @@ function Login() {
 
   return(
     <div className="container">
-      <section className="form">
+      <section className="form login">
         <img src="" alt="logo"/>
         <form onSubmit={ handleLogin }>
           <h1>Faça login</h1>

@@ -54,6 +54,17 @@ function Register() {
 
         <form onSubmit={ handleRegister }>
           <input 
+            placeholder="nome"
+            value={ name }
+            onChange={ e => setName(e.target.value) }
+          />
+          <input 
+            type="email"
+            placeholder="email"
+            value={ email }
+            onChange={ e => setEmail(e.target.value) }
+          />
+          <input 
             placeholder="login"
             value={ login }
             onChange={ e => setLogin(e.target.value) }
@@ -70,18 +81,6 @@ function Register() {
             value={ validate }
             onChange={ e => setValidate(e.target.value) }
           />
-          <input 
-            type="email"
-            placeholder="email"
-            value={ email }
-            onChange={ e => setEmail(e.target.value) }
-          />
-          <input 
-            placeholder="name"
-            value={ name }
-            onChange={ e => setName(e.target.value) }
-          />
-
           <button type="submit">Cadastrar</button>
         </form>
       </section>
