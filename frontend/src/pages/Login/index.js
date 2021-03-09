@@ -7,7 +7,7 @@ import './styles.css';
 function Login() {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
-  
+
   const history = useHistory();
 
   async function handleLogin(e) {
@@ -18,7 +18,7 @@ function Login() {
 
       localStorage.setItem('login', login);
       localStorage.setItem('password', password);
-      localStorage.setItem('id', response.data.user_id);
+      localStorage.setItem('id', response.data.id);
 
       history.push('/minors');
 
