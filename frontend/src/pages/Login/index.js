@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useHistory}  from 'react-router-dom';
 import api from '../../services/api';
 
+import logo from '../../assets/logo.png'
+
 import './styles.css';
 
 function Login() {
@@ -43,7 +45,7 @@ function Login() {
   return(
     <div className="container">
       <section className="form login">
-        <img src="" alt="logo"/>
+        <img src={ logo } alt="logo"/>
         <form onSubmit={ handleLogin }>
           <h1>Faça login</h1>
 

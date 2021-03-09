@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-//import api from '../../services/api';
 
+import perfil from '../../assets/perfil.png';
 
 import './styles.css';
 
@@ -21,7 +21,7 @@ function Perfil() {
   return(
     <div className="container">
       <section className="form">
-        <img src="./perfil.jpg" alt="foto perfil"/>
+        <img src={ perfil } alt="foto perfil"/>
         <section className = 'dadosPerfil'>
           <p>Nome: { name } </p>
           <p>Email: { email } </p>
@@ -34,7 +34,7 @@ function Perfil() {
           <button className="back">voltar</button>
         </Link>
 
-        <button onClick={handleLogout}>Logout</button>
+        <button onClick={handleLogout} className="logout">Logout</button>
       </section>
     </div>
   );

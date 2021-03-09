@@ -1,20 +1,30 @@
+img {
+  width: 100px;
+}
+
+.dadosPerfil {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 10px;
+}
+
 :link {
   text-decoration: none;
 }
+
+.linksAltera {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .back {
   display: flex;
   position: relative;
-  top: 250px;
-}
-
-.dadosPerfil{
-  font-size: 26px;
-  line-height: 60px;
-  position: relative;
   top: 80px;
 }
 
-.linksAltera{
+.logout {
+  display: flex;
   position: relative;
-  top: 80px;
+  top: 120px;
 }
