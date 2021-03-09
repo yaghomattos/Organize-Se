@@ -25,7 +25,8 @@ function Register() {
 
     try {
       localStorage.setItem('validate', validate);
-      if(verifyPassword()) {
+
+      if(verifyPassword() && validationRegister()) {
         const response = await api.post('user', data);
 
         alert(`Cadastro realizado com sucesso: ${response.data.id}`);
@@ -40,10 +41,18 @@ function Register() {
     }
   }
 
+  function validationRegister() {
+    if(login | password | name | email | validate !== '') {
+      return true;
+    }  
+    return false;  
+  }
+
   function verifyPassword() {
     if(validate === password) {
       return true;
     }
+    return false;
   }
 
   return(

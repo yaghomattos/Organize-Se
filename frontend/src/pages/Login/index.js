@@ -22,12 +22,23 @@ function Login() {
       localStorage.setItem('name', response.data.name);
       localStorage.setItem('email', response.data.email);
 
-      history.push('/minors');
+      if(validationLogin()) {
+        history.push('/minors');
+      }
+      else 
+        alert('Campos Login e senha não poden ser nulos')
 
     } catch(error) {
       alert('Login ou senha incorretos');
     }
   }  
+
+  function validationLogin() {
+    if(login | password !== '') {
+      return true;
+    }  
+    return false;  
+  }
 
   return(
     <div className="container">
@@ -43,6 +54,7 @@ function Login() {
           />
 
           <input 
+            type="password"
             placeholder="senha"
             value={ password }
             onChange={ e => setPassword(e.target.value) }
