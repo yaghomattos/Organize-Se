@@ -10,6 +10,10 @@ function Outlays() {
 
   const user_id = localStorage.getItem('id');
 
+  var value = 0;
+  var name = 0;
+  var type = 0;
+
   useEffect(() => {
     api.get('outlays', {
       headers: {
@@ -34,12 +38,37 @@ function Outlays() {
     }
   }
 
-  async function promptSalario() {
-    await prompt('Digite seu salário: ');
+  function promptSalario() {
+    var salary = prompt('Digite seu salário: ');
+    sessionStorage.setItem('salary', salary);
   }
 
-  async function promptGastos() {
-    await prompt('Gastos: ');
+  function promptGastos() {
+    value = prompt('Valor da despesa: ');
+    name = prompt('Nome da empresa: ');
+    type = prompt('Despesa fixa ou variavel');
+    sessionStorage.setItem('value', value);
+    sessionStorage.setItem('name', name);
+    sessionStorage.setItem('type', type);
+
+    handleSetOutlay();
+    window.location.reload(false);
+  }
+
+  async function handleSetOutlay() {
+    const data = {
+      value,
+      name,
+      type,
+      user_id,
+    };
+
+    await api.post('outlays', data, {
+      headers: {
+        Authorization: user_id,
+      }
+    });
+    alert(`Gasto cadastrado`);
   }
 
   return(
@@ -66,7 +95,7 @@ function Outlays() {
 
       <div className="links">
           <button onClick={ promptSalario }>Alterar salário</button>
-          <button onClick={ promptGastos }>Editar gastos fixos</button>
+          <button onClick={ promptGastos }>Acrescentar gastos fixos</button>
       </div>
       <Link to="/minors">
         <button className="back-outlays">voltar</button>
