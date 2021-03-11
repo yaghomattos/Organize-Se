@@ -9,3 +9,7 @@ body {
   background-color: hsl(225, 73%, 57%);
   font-family: helvetica;
 }
+
+button {
+  border-radius: 8px;
+}

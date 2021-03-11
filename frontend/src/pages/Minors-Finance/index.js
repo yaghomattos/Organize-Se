@@ -30,7 +30,7 @@ function Minors() {
             <button>Gastos</button>
           </Link>
           <Link to="/calc">
-            <button>Investimentos</button>
+            <button className="separator">Investimentos</button>
           </Link>
           <Link to="/perfil">
             <button>Perfil</button>

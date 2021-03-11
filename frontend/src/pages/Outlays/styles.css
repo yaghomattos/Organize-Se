@@ -48,3 +48,10 @@
   font-size: 13px;
   align-items: center;
 }
+
+.back-outlays {
+  display: flex;
+  position: relative;
+  left: 270px;
+  top: 20px;
+}

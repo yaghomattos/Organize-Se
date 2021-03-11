@@ -1,9 +1,13 @@
+.form.login h3 {
+  margin: 0;
+}
+
+.form.login input {
+  margin-top: 30px;
+}
+
 .register {
   font-size: 20px;
   text-decoration: none;
-  color: #fff;
-}
-
-.form.login input{
-  margin-top: 30px;
+  color: #000;
 }

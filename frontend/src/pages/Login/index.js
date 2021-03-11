@@ -47,8 +47,8 @@ function Login() {
       <section className="form login">
         <img src={ logo } alt="logo"/>
         <form onSubmit={ handleLogin }>
-          <h1>Faça login</h1>
-
+          <h1>Organize $e</h1>
+          <h3>Faça login</h3>
           <input 
             placeholder="login" 
             value={ login } 

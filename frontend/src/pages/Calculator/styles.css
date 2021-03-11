@@ -1,5 +1,5 @@
 .calc-container {
-  width: 800px;
+  width: 900px;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -23,12 +23,18 @@
 }
 
 .data-calc form {
+  display: inline-block;
   margin-top: 40px;
+}
+
+.data-calc form label {
+  margin-left: 5px;
 }
 
 .data-calc form input {
   width: 180px;
-  height: 45px; 
+  height: 35px;
+  border-radius: 10px; 
 }
 
 .data-calc form button {
@@ -38,3 +44,9 @@
   margin: 15px auto;
 }
 
+.back-calc {
+  display: flex;
+  position: relative;
+  bottom: 10px;
+  left: 800px;
+}

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -31,13 +32,22 @@ function Calculator(e) {
       
       <section className="data-calc">
         <form onSubmit={ CalculaInvestimento }>
+          <label>meses</label>
           <input type="number" placeholder="Tempo de investimento" onChange={ e => setTempo(e.target.value)}/>
+          <label>R$</label>
           <input type="number" placeholder="Investimento inicial" onChange={ e => setInicial(e.target.value)}/>
+          <label>R$</label>
           <input type="number" placeholder="Investimento mensal" onChange={ e => setMensal(e.target.value)}/>
+          <label>%</label>
           <input type="number" placeholder="Percentual" onChange={ e => setPercentual(e.target.value)}/>
           <button type="submit">Calcular</button>
         </form>
+      
+        <Link to="/minors">
+          <button className="back-calc">voltar</button>
+        </Link>
       </section>
+
     </div>
   );
 }

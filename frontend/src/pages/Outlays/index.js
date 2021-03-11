@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -66,6 +68,9 @@ function Outlays() {
           <button onClick={ promptSalario }>Alterar salário</button>
           <button onClick={ promptGastos }>Editar gastos fixos</button>
       </div>
+      <Link to="/minors">
+        <button className="back-outlays">voltar</button>
+      </Link>
     </div>
   );
 }
